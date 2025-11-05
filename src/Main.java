@@ -1,9 +1,11 @@
 
 public class Main {
-	public static void main(String[] args) {
-		System.out.println("Hello, World");
-		
+	public static void main(String[] args) {		
+		// Inisialisasi kelas Database sekaligus mengkoneksikan databse
 		var db = new Database();
+		
+		// Membuat 3 Threads, setiap Thread merepresentasikan suatu tempat
+		// contoh: Mataram, Narmada, Batulayar
 		var t1 = new Thread(() -> {
 			var loc = "Mataram";
 			
@@ -32,6 +34,7 @@ public class Main {
 			}
 		});
 		
+		// Mulai Thread
 		t1.start();
 		t2.start();
 		t3.start();
